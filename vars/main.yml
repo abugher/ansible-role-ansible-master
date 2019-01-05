@@ -28,3 +28,4 @@ allow_users:
   - 'ansible'
 known_hosts:
   - 'meliora'
+  - 'spy'
