@@ -6,3 +6,5 @@
 - include:              '../tasks/authorized_keys.yml'
 - include:              '../tasks/allow_users.yml'
 - include:              '../tasks/known_hosts.yml'
+  vars:
+    known_hosts:        "{{ groups['world'] }}"
