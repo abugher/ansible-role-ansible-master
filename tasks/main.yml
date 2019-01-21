@@ -7,4 +7,4 @@
 - include:              '../tasks/allow_users.yml'
 - include:              '../tasks/known_hosts.yml'
   vars:
-    known_hosts:        "{{ groups['world'] }}"
+    known_hosts:        "{{ groups['ansible_target'] }}"
