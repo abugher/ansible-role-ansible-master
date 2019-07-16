@@ -1,9 +1,9 @@
 ---
 install_packages:
   - 'rsync'             # Needed by synchronize module.
+  - 'python3-dnspython' # Needed for:  lookup('dig', '[URL]')
 install_python_packages:
   - 'ansible'
-  - 'dnspython'         # {{ lookup('dig', <hostname>) }}
 create_files:
   - path:               '/etc/ansible'
     state:              'directory'
