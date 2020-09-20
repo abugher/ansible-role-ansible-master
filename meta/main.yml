@@ -1,4 +1,4 @@
 ---
 dependencies:
-  - role:       'python'
+  - role:       'ansible_target'
     when:       skipdeps is not defined
