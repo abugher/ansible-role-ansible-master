@@ -2,3 +2,5 @@
 dependencies:
   - role:       'ansible_target'
     when:       skipdeps is not defined
+  - role:       'user_friendly'
+    when:       skipdeps is not defined
