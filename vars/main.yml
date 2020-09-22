@@ -3,6 +3,7 @@ install_packages:
   - 'rsync'             # Needed by synchronize module.
   - 'python3-dnspython' # Needed for:  lookup('dig', '[URL]')
   - 'ansible'
+  - 'git'
 install_files:
   - owner:              'ansible'
     group:              'ansible'
