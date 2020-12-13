@@ -4,6 +4,7 @@ install_packages:
   - 'python3-dnspython' # Needed for:  lookup('dig', '[URL]')
   - 'ansible'
   - 'git'
+  - 'openssl'           # Generate fingerprints from certificates.
 install_files:
   - owner:              'ansible'
     group:              'ansible'
