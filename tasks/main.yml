@@ -4,3 +4,8 @@
 - include:              '../tasks/known_hosts.yml'
   vars:
     known_hosts:        "{{ groups['ansible_target'] }}"
+# This may technically belong in inventory.
+- include:              '../tasks/known_hosts.yml'
+  vars:
+    known_hosts:
+      - "github.com"
