@@ -9,7 +9,7 @@ install_files:
   - owner:              'ansible'
     group:              'ansible'
     mode:               '0600'
-    src:                "../../../sensitive_ansible/inventory/hosts/{{ inventory_hostname }}/users/ansible/files/ssh_keys/id_rsa"
+    src:                "../../../sensitive-ansible/inventory/hosts/{{ inventory_hostname }}/users/ansible/files/ssh_keys/id_rsa"
     dest:               '~ansible/.ssh/id_rsa'
   - owner:              'ansible'
     group:              'ansible'
@@ -18,4 +18,4 @@ install_files:
     dest:               '~ansible/.ssh/id_rsa.pub'
   - 'ansible_target'
   - 'user_friendly'
-  - 'ssh_client'
+  - 'ssh-client'
