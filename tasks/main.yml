@@ -1,9 +1,10 @@
 ---
+- include:              '../tasks/dependencies.yml'
 - include:              '../tasks/install_packages.yml'
 - include:              '../tasks/install_files.yml'
 - include:              '../tasks/known_hosts.yml'
   vars:
-    known_hosts:        "{{ groups['ansible_target'] }}"
+    known_hosts:        "{{ groups['ansible-target'] }}"
 # This may technically belong in inventory.
 - include:              '../tasks/known_hosts.yml'
   vars:
