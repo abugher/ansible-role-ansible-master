@@ -1,9 +1,4 @@
 ---
-dependencies:
-  - 'ansible-target'
-  - 'user-friendly'
-  - 'ssh-client'
-  - 'ssl-client'
 install_packages:
   - 'rsync'             # Needed by synchronize module.
   - 'python3-dnspython' # Needed for:  lookup('dig', '[URL]')

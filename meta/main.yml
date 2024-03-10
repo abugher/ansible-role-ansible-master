@@ -1,0 +1,16 @@
+---
+dependencies:
+  - role:     'ansible-target'
+    tags:     
+      - 'dependency'
+  - role:     'user-friendly'
+    tags:     
+      - 'dependency'
+  - role:     'ssh-client'
+    tags:     
+      - 'dependency'
+  - role:     'ssl-client'
+    tags:     
+      - 'dependency'
+
+
