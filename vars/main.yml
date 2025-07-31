@@ -16,3 +16,7 @@ install_files:
     mode:               '0644'
     src:                "{{ role_path }}/../../inventory/hosts/{{ inventory_hostname }}/users/ansible/files/ssh_keys/id_rsa.pub"
     dest:               '~ansible/.ssh/id_rsa.pub'
+lines_in_files:
+  - line:               "{{ hostvars[groups['dns-internal'][0]]['ip_address'] }} {{ groups['dns-internal'][0] }}.{{ domain }} {{ groups['dns-internal'][0] }}  # Allow ansible to reach DNS server before DNS is up."
+    regexp:             " {{ groups['dns-internal'][0] }}( |$)"
+    path:               '/etc/hosts'
