@@ -1,0 +1,1 @@
+This could potentially be split into two roles, with the other being "ansible-test-host" or something similar.  The testing process is, itself, still being tested, and for now it happens on the same workstation responsible for deployment of roles.

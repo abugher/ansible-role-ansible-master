@@ -5,6 +5,8 @@ install_packages:
   - 'ansible'
   - 'git'
   - 'openssl'           # Generate fingerprints from certificates.
+  - 'iptables'          # Mark packets for routing from test VM SSH client user to test VMs.
+  - 'iproute2'          # Route marked packets from test VM SSH client user to test VMs.
 install_files:
   - owner:              'ansible'
     group:              'ansible'
@@ -20,7 +22,8 @@ lines_in_files:
   - line:               "{{ hostvars[groups['dns-internal'][0]]['ip_address'] }} {{ groups['dns-internal'][0] }}.{{ domain }} {{ groups['dns-internal'][0] }}  # Allow ansible to reach DNS server before DNS is up."
     regexp:             " {{ groups['dns-internal'][0] }}( |$)"
     path:               '/etc/hosts'
+testvm_ssh_client='testvm-ssh-client'
 user_groups:
-  - 'testvm-ssh-client'
+  - "{{ testvm_ssh_client }}"
 users:
-  - 'testvm-ssh-client'
+  - "{{ testvm_ssh_client }}"
