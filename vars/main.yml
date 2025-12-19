@@ -22,7 +22,7 @@ lines_in_files:
   - line:               "{{ hostvars[groups['dns-internal'][0]]['ip_address'] }} {{ groups['dns-internal'][0] }}.{{ domain }} {{ groups['dns-internal'][0] }}  # Allow ansible to reach DNS server before DNS is up."
     regexp:             " {{ groups['dns-internal'][0] }}( |$)"
     path:               '/etc/hosts'
-testvm_ssh_client='testvm-ssh-client'
+testvm_ssh_client:      'testvm-ssh-client'
 user_groups:
   - "{{ testvm_ssh_client }}"
 users:
