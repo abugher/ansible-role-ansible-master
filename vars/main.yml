@@ -7,6 +7,7 @@ install_packages:
   - 'openssl'           # Generate fingerprints from certificates.
   - 'iptables'          # Mark packets for routing from test VM SSH client user to test VMs.
   - 'iproute2'          # Route marked packets from test VM SSH client user to test VMs.
+  - 'bind9-dnsutils'    # For dig.
 install_files:
   - owner:              'ansible'
     group:              'ansible'
