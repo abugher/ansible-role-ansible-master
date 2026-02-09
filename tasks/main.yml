@@ -4,9 +4,6 @@
 - include_tasks:        '../tasks/lines_in_files.yml'
 - include_tasks:        '../tasks/user_groups.yml'
 - include_tasks:        '../tasks/users.yml'
-- include_tasks:        '../tasks/known_hosts.yml'
-  vars:
-    known_hosts:        "{{ groups['ansible-target'] }}"
 # This may technically belong in inventory.
 - include_tasks:        '../tasks/known_hosts.yml'
   vars:
