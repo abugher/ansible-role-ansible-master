@@ -4,8 +4,3 @@
 - include_tasks:        'tasks/common/lines_in_files.yml'
 - include_tasks:        'tasks/common/user_groups.yml'
 - include_tasks:        'tasks/common/users.yml'
-# This may technically belong in inventory.
-- include_tasks:        'tasks/common/known_hosts.yml'
-  vars:
-    known_hosts:
-      - "github.com"
